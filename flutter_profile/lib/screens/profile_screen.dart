@@ -28,23 +28,66 @@ class ProfileState extends BaseState<ProfileScreen> {
       backgroundColor: AppColors.TRANSPARENT_BACKGROUND_COLOR,
       body: Center(
           child:Container(
+            margin: new EdgeInsets.only(top: 60.0),
             child: Column(
               children: <Widget>[
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Container(
-                        margin: new EdgeInsets.only(top: 60.0,right: 16),
-                        child: Text(S.of(context).story_give_feedback,style: TextStyle(color: Colors.white, fontSize: 12.0,),)
-                    )
-                  ],
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                          Expanded(
+                              flex: 1,
+                              child: Text('')
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Stack(
+                              alignment: Alignment.topCenter,
+                              children: <Widget>[
+                                Text(S.of(context).profileJournible,style: TextStyle(color: Colors.white24,fontWeight: FontWeight.bold, fontSize: 28.0),),
+                                Container(
+                                    margin: new EdgeInsets.only(top: 22.0,),
+                                    child: Text(S.of(context).profile,style: TextStyle(color: Colors.white54,fontWeight: FontWeight.bold, fontSize: 28.0),)
+                                )
+                              ],
+                            )
+                          ),
+                        Expanded(
+                            child:  Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                Container(
+                                    margin: new EdgeInsets.only(right: 16.0,),
+                                    child:  Icon(Icons.settings, color: Colors.white54)
+                                )
+
+                              ],
+                            ),
+                          ),
+                        ]
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                Stack(
+                  alignment: Alignment.topCenter,
                   children: <Widget>[
                     Container(
-                        margin: new EdgeInsets.only(top: 20.0,left: 48),
-                        child: Text(S.of(context).story_good_evening_sofus,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 18.0),)
+                        padding: new EdgeInsets.all(24),
+                      decoration: new BoxDecoration(
+                        image: new DecorationImage(image: new AssetImage("assets/bg_avatar_blue.png"), fit: BoxFit.cover,),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/paper.png',
+                            fit: BoxFit.cover,
+                            width: 72,
+                            height: 72,
+                          ),
+                        ],
+                      )
+                    ),
+
+                    Container(
+                        margin: new EdgeInsets.only(top: 22.0,),
+                        child: Text(S.of(context).profile,style: TextStyle(color: Colors.white54,fontWeight: FontWeight.bold, fontSize: 28.0),)
                     )
                   ],
                 ),
@@ -71,7 +114,7 @@ class ProfileState extends BaseState<ProfileScreen> {
                             height: 72,
                           ),
                           SizedBox(height: 16),
-                          Text(S.of(context).story_make_today_story,style: TextStyle(color: Colors.white70, fontSize: 12.0,))
+                          Text(S.of(context).storyMakeTodayStory,style: TextStyle(color: Colors.white70, fontSize: 12.0,))
                         ],
                       ),
                     )

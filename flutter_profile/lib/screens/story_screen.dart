@@ -35,7 +35,7 @@ class StoryState extends BaseState<StoryScreen> {
                 children: <Widget>[
                   Container(
                       margin: new EdgeInsets.only(top: 60.0,right: 16),
-                      child: Text(S.of(context).story_give_feedback,style: TextStyle(color: Colors.white, fontSize: 12.0,),)
+                      child: Text(S.of(context).storyGiveFeedback,style: TextStyle(color: Colors.white, fontSize: 12.0,),)
                   )
                 ],
               ),
@@ -44,7 +44,7 @@ class StoryState extends BaseState<StoryScreen> {
                 children: <Widget>[
                   Container(
                       margin: new EdgeInsets.only(top: 20.0,left: 48),
-                      child: Text(S.of(context).story_good_evening_sofus,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 18.0),)
+                      child: Text(S.of(context).storyGoodEveningSofus,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 18.0),)
                   )
                 ],
               ),
@@ -71,7 +71,7 @@ class StoryState extends BaseState<StoryScreen> {
                           height: 72,
                         ),
                         SizedBox(height: 16),
-                        Text(S.of(context).story_make_today_story,style: TextStyle(color: Colors.white70, fontSize: 12.0,))
+                        Text(S.of(context).storyMakeTodayStory,style: TextStyle(color: Colors.white70, fontSize: 12.0,))
                       ],
                     ),
                   )

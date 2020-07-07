@@ -12,6 +12,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutterprofile/resource/app_colors.dart';
+import 'package:flutterprofile/screens/profile_screen.dart';
 
 import 'generated/l10n.dart';
 import 'screens/story_screen.dart';
@@ -47,25 +48,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> with SingleTickerPr
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-  ];
   TabController _tabController;
 
 
   @override
   void initState() {
+    super.initState();
     _tabController = TabController(vsync: this,length: 3);
     _tabController.addListener(() {
       if (_tabController.index == 0) {
@@ -125,10 +113,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> with SingleTickerPr
                   'Index 1: Home',
                   style: optionStyle,
                 ),
-                Text(
-                  'Index 2: Hme',
-                  style: optionStyle,
-                ),
+                ProfileScreen(),
               ],
             ),
           ],

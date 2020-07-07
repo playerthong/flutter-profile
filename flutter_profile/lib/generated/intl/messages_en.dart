@@ -22,13 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "profile" : MessageLookupByLibrary.simpleMessage("PROFILE"),
-    "profile_get_in_touch" : MessageLookupByLibrary.simpleMessage("Get in touch"),
-    "profile_join_journible_premium" : MessageLookupByLibrary.simpleMessage("Join Journible Premium"),
-    "profile_journible" : MessageLookupByLibrary.simpleMessage("JOURNIBLE"),
-    "profile_rate_journible_5_stars" : MessageLookupByLibrary.simpleMessage("Rate journible 5-stars"),
-    "profile_share_with_a_teammate" : MessageLookupByLibrary.simpleMessage("Share with a teammate"),
-    "story_give_feedback" : MessageLookupByLibrary.simpleMessage("Give feedback!"),
-    "story_good_evening_sofus" : MessageLookupByLibrary.simpleMessage("Good evening,\nSofus"),
-    "story_make_today_story" : MessageLookupByLibrary.simpleMessage("MAKE TODAYS STORY")
+    "profileGetInTouch" : MessageLookupByLibrary.simpleMessage("Get in touch"),
+    "profileJoinJourniblePremium" : MessageLookupByLibrary.simpleMessage("Join Journible Premium"),
+    "profileJournible" : MessageLookupByLibrary.simpleMessage("JOURNIBLE"),
+    "profileRateJournible5Stars" : MessageLookupByLibrary.simpleMessage("Rate journible 5-stars"),
+    "profileShareWithATeammate" : MessageLookupByLibrary.simpleMessage("Share with a teammate"),
+    "storyGiveFeedback" : MessageLookupByLibrary.simpleMessage("Give feedback!"),
+    "storyGoodEveningSofus" : MessageLookupByLibrary.simpleMessage("Good evening,\nSofus"),
+    "storyMakeTodayStory" : MessageLookupByLibrary.simpleMessage("MAKE TODAYS STORY")
   };
 }

@@ -1,13 +1,13 @@
 {
 
-  "story_give_feedback": "Give feedback!",
-  "story_good_evening_sofus": "Good evening,\nSofus",
-  "story_make_today_story": "MAKE TODAYS STORY",
+  "storyGiveFeedback": "Give feedback!",
+  "storyGoodEveningSofus": "Good evening,\nSofus",
+  "storyMakeTodayStory": "MAKE TODAYS STORY",
 
   "profile": "PROFILE",
-  "profile_journible": "JOURNIBLE",
-  "profile_join_journible_premium": "Join Journible Premium",
-  "profile_share_with_a_teammate": "Share with a teammate",
-  "profile_rate_journible_5_stars": "Rate journible 5-stars",
-  "profile_get_in_touch": "Get in touch"
+  "profileJournible": "JOURNIBLE",
+  "profileJoinJourniblePremium": "Join Journible Premium",
+  "profileShareWithATeammate": "Share with a teammate",
+  "profileRateJournible5Stars": "Rate journible 5-stars",
+  "profileGetInTouch": "Get in touch"
 }

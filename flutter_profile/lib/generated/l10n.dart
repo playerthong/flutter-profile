@@ -27,28 +27,28 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  String get story_give_feedback {
+  String get storyGiveFeedback {
     return Intl.message(
       'Give feedback!',
-      name: 'story_give_feedback',
+      name: 'storyGiveFeedback',
       desc: '',
       args: [],
     );
   }
 
-  String get story_good_evening_sofus {
+  String get storyGoodEveningSofus {
     return Intl.message(
       'Good evening,\nSofus',
-      name: 'story_good_evening_sofus',
+      name: 'storyGoodEveningSofus',
       desc: '',
       args: [],
     );
   }
 
-  String get story_make_today_story {
+  String get storyMakeTodayStory {
     return Intl.message(
       'MAKE TODAYS STORY',
-      name: 'story_make_today_story',
+      name: 'storyMakeTodayStory',
       desc: '',
       args: [],
     );
@@ -63,46 +63,46 @@ class S {
     );
   }
 
-  String get profile_journible {
+  String get profileJournible {
     return Intl.message(
       'JOURNIBLE',
-      name: 'profile_journible',
+      name: 'profileJournible',
       desc: '',
       args: [],
     );
   }
 
-  String get profile_join_journible_premium {
+  String get profileJoinJourniblePremium {
     return Intl.message(
       'Join Journible Premium',
-      name: 'profile_join_journible_premium',
+      name: 'profileJoinJourniblePremium',
       desc: '',
       args: [],
     );
   }
 
-  String get profile_share_with_a_teammate {
+  String get profileShareWithATeammate {
     return Intl.message(
       'Share with a teammate',
-      name: 'profile_share_with_a_teammate',
+      name: 'profileShareWithATeammate',
       desc: '',
       args: [],
     );
   }
 
-  String get profile_rate_journible_5_stars {
+  String get profileRateJournible5Stars {
     return Intl.message(
       'Rate journible 5-stars',
-      name: 'profile_rate_journible_5_stars',
+      name: 'profileRateJournible5Stars',
       desc: '',
       args: [],
     );
   }
 
-  String get profile_get_in_touch {
+  String get profileGetInTouch {
     return Intl.message(
       'Get in touch',
-      name: 'profile_get_in_touch',
+      name: 'profileGetInTouch',
       desc: '',
       args: [],
     );
