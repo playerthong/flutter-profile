@@ -10,7 +10,11 @@
 // bar items. The first one is selected.](https://flutter.github.io/assets-for-api-docs/assets/material/bottom_navigation_bar.png)
 
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutterprofile/resource/app_colors.dart';
+
+import 'generated/l10n.dart';
+import 'screens/story_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +26,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       home: MyStatefulWidget(),
     );
   }
@@ -90,28 +99,41 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
+//      appBar: AppBar(
+//        title: const Text('BottomNavigationBar Sample'),
+//      ),
       body: Center(
 //        child: _widgetOptions.elementAt(_selectedIndex),
-        child: TabBarView(
-          controller: _tabController,
+        child: Stack(
           children: <Widget>[
-            Text(
-              'Index 0: Home',
-              style: optionStyle,
+            Image.asset(
+              'assets/back_ground.jpg',
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
             ),
-            Text(
-              'Index 1: Home',
-              style: optionStyle,
+            Container(
+              color: AppColors.OVERLAY_BACKGROUND_COLOR,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
             ),
-            Text(
-              'Index 2: Hme',
-              style: optionStyle,
+            TabBarView(
+              controller: _tabController,
+              children: <Widget>[
+                StoryScreen(),
+                Text(
+                  'Index 1: Home',
+                  style: optionStyle,
+                ),
+                Text(
+                  'Index 2: Hme',
+                  style: optionStyle,
+                ),
+              ],
             ),
           ],
-        ),
+        )
+
       ),
       bottomNavigationBar: Container(
         height: 48,
