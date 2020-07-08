@@ -92,7 +92,7 @@ class S {
 
   String get profileRateJournible5Stars {
     return Intl.message(
-      'Rate journible 5-stars',
+      'Rate journible\n5-stars',
       name: 'profileRateJournible5Stars',
       desc: '',
       args: [],
@@ -103,6 +103,51 @@ class S {
     return Intl.message(
       'Get in touch',
       name: 'profileGetInTouch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get share_that_journible_feeling {
+    return Intl.message(
+      'Share that Journible feeling',
+      name: 'share_that_journible_feeling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get share_help_your_friends {
+    return Intl.message(
+      'Help your friends or teamates to get\nthe best out of their sports-journey',
+      name: 'share_help_your_friends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get share_send_invite {
+    return Intl.message(
+      'SEND INVITE',
+      name: 'share_send_invite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get share_text {
+    return Intl.message(
+      'TEXT',
+      name: 'share_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get share {
+    return Intl.message(
+      'SHARE',
+      name: 'share',
       desc: '',
       args: [],
     );

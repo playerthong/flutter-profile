@@ -8,6 +8,12 @@
   "profileJournible": "JOURNIBLE",
   "profileJoinJourniblePremium": "Join Journible Premium",
   "profileShareWithATeammate": "Share with a\nteammate",
-  "profileRateJournible5Stars": "Rate journible 5-stars",
-  "profileGetInTouch": "Get in touch"
+  "profileRateJournible5Stars": "Rate journible\n5-stars",
+  "profileGetInTouch": "Get in touch",
+
+  "share_that_journible_feeling": "Share that Journible feeling",
+  "share_help_your_friends": "Help your friends or teamates to get\nthe best out of their sports-journey",
+  "share_send_invite": "SEND INVITE",
+  "share_text": "TEXT",
+  "share": "SHARE"
 }

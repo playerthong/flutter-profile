@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterprofile/generated/l10n.dart';
 import 'package:flutterprofile/resource/app_colors.dart';
+import 'package:flutterprofile/resource/app_dimens.dart';
+import 'package:flutterprofile/screens/share_screen.dart';
 
 
 import 'base_screen.dart';
@@ -15,20 +17,26 @@ class ProfileScreen extends BaseScreen {
 }
 
 class ProfileState extends BaseState<ProfileScreen> {
-
+  bool _isSharingShowing=false;
   @override
   void initState() {
     super.initState();
-
   }
 
+  void _showingSharingScreen(){
+    setState(() {
+      _isSharingShowing=true;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.TRANSPARENT_BACKGROUND_COLOR,
       body: Center(
-          child:Container(
-            margin: new EdgeInsets.only(top: 60.0),
+          child:
+          _isSharingShowing?ShareScreen():
+          Container(
+            margin: new EdgeInsets.only(top: AppDimens.MARGIN_TOP_DEFAULT_OF_SCREEN),
             child: Column(
               children: <Widget>[
                 Row(
@@ -124,23 +132,29 @@ class ProfileState extends BaseState<ProfileScreen> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                          width: 90,
-                          height: 90,
-                          margin:  EdgeInsets.only(left:24.0),
-                          padding: EdgeInsets.all(16),
-                          color: AppColors.PRIMARY_COLOR,
-                          child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Icon(Icons.group, color: Colors.white54),
-                                    Text(S.of(context).profileShareWithATeammate,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
-                                  ],
-                          )
+                      GestureDetector(
+                        onTap: () {
+                          _showingSharingScreen();
+                        },
+                        child: Container(
+                            width: 100,
+                            height: 90,
+                            margin:  EdgeInsets.only(left:24.0),
+                            padding: EdgeInsets.all(16),
+                            color: AppColors.PRIMARY_COLOR,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(Icons.group, color: Colors.white54),
+                                Text(S.of(context).profileShareWithATeammate,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
+                              ],
+                            )
+                        ),
+
                       ),
 
                       Container(
-                          width: 90,
+                          width: 100,
                           height: 90,
                           margin:  EdgeInsets.only(left:8.0,right: 8),
                           padding: EdgeInsets.all(16),
@@ -149,13 +163,12 @@ class ProfileState extends BaseState<ProfileScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Icon(Icons.star, color: Colors.white54),
-                              Text(S.of(context).profileRateJournible5Stars,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
+                              Text("Rate journible \n5-stars",textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
                             ],
                           )
                       ),
-
                       Container(
-                          width: 90,
+                          width: 100,
                           height: 90,
                           margin:  EdgeInsets.only(right: 24),
                           padding: EdgeInsets.all(16),

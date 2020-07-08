@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterprofile/generated/l10n.dart';
 import 'package:flutterprofile/resource/app_colors.dart';
+import 'package:flutterprofile/resource/app_dimens.dart';
 
 
 import 'base_screen.dart';
@@ -34,7 +35,7 @@ class StoryState extends BaseState<StoryScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
-                      margin: new EdgeInsets.only(top: 60.0,right: 16),
+                      margin: new EdgeInsets.only(top: AppDimens.MARGIN_TOP_DEFAULT_OF_SCREEN,right: 16),
                       child: Text(S.of(context).storyGiveFeedback,style: TextStyle(color: Colors.white, fontSize: 12.0,),)
                   )
                 ],

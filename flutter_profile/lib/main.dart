@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutterprofile/resource/app_colors.dart';
 import 'package:flutterprofile/screens/profile_screen.dart';
+import 'package:flutterprofile/screens/share_screen.dart';
 
 import 'generated/l10n.dart';
 import 'screens/story_screen.dart';
