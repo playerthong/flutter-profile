@@ -68,7 +68,7 @@ class ShareState extends BaseState<ShareScreen> {
                 width: 100,
                 child: FlatButton.icon(
                   icon: Icon(Icons.message), //`Icon` to display
-                  label: Text('TEXT',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 10.0)), //`Text` to display
+                  label: Text(S.of(context).share_text,style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 10.0)), //`Text` to display
                   onPressed: () {
                     //Code to execute when Floating Action Button is clicked
                     //...
@@ -86,7 +86,7 @@ class ShareState extends BaseState<ShareScreen> {
                 width: 100,
                 child: FlatButton.icon(
                   icon: Icon(Icons.share), //`Icon` to display
-                  label: Text('SHARE',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 10.0)), //`Text` to display
+                  label: Text(S.of(context).share,style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 10.0)), //`Text` to display
                   onPressed: () {
                     //Code to execute when Floating Action Button is clicked
                     //...
