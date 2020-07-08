@@ -43,10 +43,10 @@ class ProfileState extends BaseState<ProfileScreen> {
                             child: Stack(
                               alignment: Alignment.topCenter,
                               children: <Widget>[
-                                Text(S.of(context).profileJournible,style: TextStyle(color: Colors.white24,fontWeight: FontWeight.bold, fontSize: 28.0),),
+                                Text(S.of(context).profileJournible,style: TextStyle(color: Colors.white24,fontWeight: FontWeight.bold, fontSize: 26.0),),
                                 Container(
-                                    margin: new EdgeInsets.only(top: 22.0,),
-                                    child: Text(S.of(context).profile,style: TextStyle(color: Colors.white54,fontWeight: FontWeight.bold, fontSize: 28.0),)
+                                    margin: new EdgeInsets.only(top: 18.0,),
+                                    child: Text(S.of(context).profile,style: TextStyle(color: Colors.white54,fontWeight: FontWeight.bold, fontSize: 24.0),)
                                 )
                               ],
                             )
@@ -65,61 +65,112 @@ class ProfileState extends BaseState<ProfileScreen> {
                           ),
                         ]
                 ),
+                SizedBox(height: 20,),
                 Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
                     Container(
-                        padding: new EdgeInsets.all(24),
+                        margin:EdgeInsets.only(top: 50),
+                        padding:  EdgeInsets.only(top: 24,bottom: 24,left: 32,right: 32),
+                        decoration:  BoxDecoration(
+                          image:  DecorationImage(image:  AssetImage("assets/bg_avatar_light_blue.png"), fit: BoxFit.cover,),
+                        ),
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(height: 80,width: 60,),
+                            Text('Albert Skram, 21',style: TextStyle(color: Colors.white, fontSize: 12.0)),
+                            Text('Basketball',style: TextStyle(color: Colors.white, fontSize: 10.0))
+                          ],
+                        )
+                    ),
+                    Container(
+                        padding: new EdgeInsets.only(top: 24,bottom: 24,left: 32,right: 32),
                       decoration: new BoxDecoration(
                         image: new DecorationImage(image: new AssetImage("assets/bg_avatar_blue.png"), fit: BoxFit.cover,),
                       ),
                       child: Column(
                         children: <Widget>[
-                          Image.asset(
-                            'assets/paper.png',
-                            fit: BoxFit.cover,
-                            width: 72,
-                            height: 72,
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundImage: NetworkImage('https://cdn.vietnammoi.vn/stores/news_dataimages/vudt/112017/29/23/5204_ebvv-fyfzhap5408766-1497427103-2487-8512-1511842926.jpg'),
                           ),
+                          SizedBox(height: 8,),
+                          Text('Albert Skram, 21',style: TextStyle(color: Colors.white, fontSize: 12.0)),
+                          Text('Basketball',style: TextStyle(color: Colors.white, fontSize: 10.0))
                         ],
                       )
                     ),
 
-                    Container(
-                        margin: new EdgeInsets.only(top: 22.0,),
-                        child: Text(S.of(context).profile,style: TextStyle(color: Colors.white54,fontWeight: FontWeight.bold, fontSize: 28.0),)
-                    )
                   ],
                 ),
+                SizedBox(height: 60,),
+                FlatButton(
+
+                  color: AppColors.OVERLAY_BACKGROUND_COLOR_BUTTON,
+                  textColor: Colors.white,
+                  disabledColor: Colors.grey,
+                  disabledTextColor: Colors.black,
+                  padding: EdgeInsets.only(left:24,right: 24,top: 8,bottom: 8),
+                  splashColor: Colors.blueAccent,
+                  onPressed: () {
+                    /*...*/
+                  },
+                  child: Text(
+                    S.of(context).profileJoinJourniblePremium,
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                ),
+                SizedBox(height: 8,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      padding: new EdgeInsets.symmetric(horizontal: 40,vertical: 100),
-                      margin: new EdgeInsets.symmetric(horizontal: 52,vertical: 48),
-                      decoration: BoxDecoration(
-                          color: AppColors.SECOND_COLOR,
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(12.0),
-                              topRight: Radius.circular(12.0),
-                              bottomLeft:Radius.circular(12.0) ,
-                              bottomRight: Radius.circular(12.0))),
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/paper.png',
-                            fit: BoxFit.cover,
-                            width: 72,
-                            height: 72,
-                          ),
-                          SizedBox(height: 16),
-                          Text(S.of(context).storyMakeTodayStory,style: TextStyle(color: Colors.white70, fontSize: 12.0,))
-                        ],
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          width: 90,
+                          height: 90,
+                          margin:  EdgeInsets.only(left:24.0),
+                          padding: EdgeInsets.all(16),
+                          color: AppColors.PRIMARY_COLOR,
+                          child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(Icons.group, color: Colors.white54),
+                                    Text(S.of(context).profileShareWithATeammate,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
+                                  ],
+                          )
                       ),
-                    )
-                  ],
-                )
+
+                      Container(
+                          width: 90,
+                          height: 90,
+                          margin:  EdgeInsets.only(left:8.0,right: 8),
+                          padding: EdgeInsets.all(16),
+                          color: AppColors.PRIMARY_COLOR,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(Icons.star, color: Colors.white54),
+                              Text(S.of(context).profileRateJournible5Stars,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
+                            ],
+                          )
+                      ),
+
+                      Container(
+                          width: 90,
+                          height: 90,
+                          margin:  EdgeInsets.only(right: 24),
+                          padding: EdgeInsets.all(16),
+                          color: AppColors.PRIMARY_COLOR,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(Icons.message, color: Colors.white54),
+                              Text(S.of(context).profileGetInTouch,textAlign: TextAlign.center,style: TextStyle(color: Colors.white54, fontSize: 10.0))
+                            ],
+                          )
+                      ),
+
+                    ]
+                ),
               ],
             ),
           )

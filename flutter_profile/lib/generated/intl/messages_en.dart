@@ -26,7 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "profileJoinJourniblePremium" : MessageLookupByLibrary.simpleMessage("Join Journible Premium"),
     "profileJournible" : MessageLookupByLibrary.simpleMessage("JOURNIBLE"),
     "profileRateJournible5Stars" : MessageLookupByLibrary.simpleMessage("Rate journible 5-stars"),
-    "profileShareWithATeammate" : MessageLookupByLibrary.simpleMessage("Share with a teammate"),
+    "profileShareWithATeammate" : MessageLookupByLibrary.simpleMessage("Share with a\nteammate"),
     "storyGiveFeedback" : MessageLookupByLibrary.simpleMessage("Give feedback!"),
     "storyGoodEveningSofus" : MessageLookupByLibrary.simpleMessage("Good evening,\nSofus"),
     "storyMakeTodayStory" : MessageLookupByLibrary.simpleMessage("MAKE TODAYS STORY")

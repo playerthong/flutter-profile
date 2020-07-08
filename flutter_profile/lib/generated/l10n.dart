@@ -83,7 +83,7 @@ class S {
 
   String get profileShareWithATeammate {
     return Intl.message(
-      'Share with a teammate',
+      'Share with a\nteammate',
       name: 'profileShareWithATeammate',
       desc: '',
       args: [],
