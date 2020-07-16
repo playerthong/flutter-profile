@@ -4,7 +4,7 @@ import 'package:flutterprofile/resource/app_colors.dart';
 import 'package:flutterprofile/resource/app_dimens.dart';
 
 
-import 'base_screen.dart';
+import '../../../../journible/lib/screens/base_screen.dart';
 
 class StoryScreen extends BaseScreen {
 

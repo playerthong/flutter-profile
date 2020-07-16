@@ -5,7 +5,7 @@ import 'package:flutterprofile/resource/app_dimens.dart';
 import 'package:flutterprofile/screens/share_screen.dart';
 
 
-import 'base_screen.dart';
+import '../../../../journible/lib/screens/base_screen.dart';
 
 class ProfileScreen extends BaseScreen {
 
